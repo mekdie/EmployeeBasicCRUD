@@ -1,0 +1,70 @@
+<div class="container my-5">
+  <h1 class="mb-3">Add new employee</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="updateEmployee()">
+        <div class="mb-3">
+          <label for="name" class="form-label">ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="ID"
+            name="ID"
+            [(ngModel)]="editEmployee.id"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            [(ngModel)]="editEmployee.name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            [(ngModel)]="editEmployee.email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            name="phone"
+            [(ngModel)]="editEmployee.phone"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="salary" class="form-label">Salary</label>
+          <input
+            type="number"
+            class="form-control"
+            id="salary"
+            name="salary"
+            [(ngModel)]="editEmployee.salary"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary mr-5">Submit</button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteEmployee(employeeId)"
+        >
+          Delete
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
